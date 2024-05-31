@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<style>
+/* Add your CSS styling here */
+</style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div id="countdown" class="row">
+            <div class="countdown-col-wrapper col-xs-3">
+                <div class="countdown-col"><span id="days" class="countdown-time"> 0 </span> Days</div>
+            </div>
+            <div class="countdown-col-wrapper col-xs-3">
+                <div class="countdown-col"><span id="hours" class="countdown-time"> 00 </span> Hours</div>
+            </div>
+            <div class="countdown-col-wrapper col-xs-3">
+                <div class="countdown-col"><span id="minutes" class="countdown-time"> 00 </span> Minutes</div>
+            </div>
+            <div class="countdown-col-wrapper col-xs-3">
+                <div class="countdown-col"><span id="seconds" class="countdown-time"> 00 </span> Seconds</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Set the date you're counting down to
+    var countDownDate = new Date("Augest 22, 2024 00:11:00").getTime();
+    
+    // Update the countdown every second
+    var x = setInterval(function() {
+    
+      // Get the current date and time
+      var now = new Date().getTime();
+    
+      // Calculate the time remaining
+      var distance = countDownDate - now;
+    
+      // Calculate days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Add leading zeros if necessary
+      hours = String(hours).padStart(2, '0');
+      minutes = String(minutes).padStart(2, '0');
+      seconds = String(seconds).padStart(2, '0');
+    
+      // Display the countdown
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+
+</body>
+</html>
