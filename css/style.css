@@ -1880,9 +1880,7 @@
     display: none !important;
   }
   @media (max-width: 992px) {
-    .container {
-      pointer-events: none;
-    }
+   
     a,
     form,
     .owl-pagination {
