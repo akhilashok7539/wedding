@@ -384,7 +384,7 @@
   ! Backgrounds
   ========================================================== */
   .bg-mask {
-    background: url('../img/bg-mask.png');
+    /* background: url('../img/bg-mask.png'); */
     position: fixed;
     top: 0;
     left: 0;
@@ -1002,7 +1002,7 @@
     top: 16px;
     left: 50%;
     margin-left: -25px;
-    background-color: #d1837e;
+    background-color: #927cbe;
     z-index: 100;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;

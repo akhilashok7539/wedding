@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/img/akhil.jpg">
     <title>Akhil &amp; Aparna</title>
     <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
@@ -30,15 +31,26 @@
                 display: none;
 
             }
+            .mobile{
+                display: none;
+            }
         }
 
         @media (max-width: 767px) {
+            .web{
+                display: none;
+            }
+            .page-home{
+                padding-top: 10px;
+            }
             .boxed-content {
                 display: flex;
                 justify-content: center;
                 margin-top: 20px;
             }
-
+            .text-size-wedding{
+                font-size: 14px !important;
+            }
             .logo-part {
                 display: flex;
                 justify-content: center;
@@ -111,7 +123,7 @@
     </div>
 
 
-    <div class="page-background-container viewport" style="min-height: 526px;">
+    <div class="page-background-container viewport web" style="min-height: 526px;">
         <div class="bg-mask viewport" style="min-height: 526px;"></div>
         <div class="bg-slideshow" style="position: relative;">
             <div class="page-background viewport cycle-slide cycle-sentinel"
@@ -122,8 +134,21 @@
                 style="background-image: url(&quot;img/bg-new1.jpg&quot;); position: absolute; top: 0px; left: 0px; opacity: 1; display: block; visibility: visible; z-index: 99; min-height: 526px;">
             </div>
         </div>
+        
     </div>
+    <div class="page-background-container viewport mobile" style="min-height: 526px;">
+        <div class="bg-mask viewport" style="min-height: 526px;"></div>
+    
+        <div class="bg-slideshow" style="position: relative;">
+            <div class="page-background viewport cycle-slide cycle-sentinel"
+                style="background-image: url(&quot;img/bg-new2.jpg&quot;); top: 0px; left: 0px; opacity: 1; z-index: 99; position: static; visibility: hidden; display: block; min-height: 526px;">
+            </div>
 
+            <div class="page-background viewport cycle-slide cycle-slide-active"
+                style="background-image: url(&quot;img/bg-new2.jpg&quot;); position: absolute; top: 0px; left: 0px; opacity: 1; display: block; visibility: visible; z-index: 99; min-height: 526px;">
+            </div>
+        </div>
+    </div>
 
 
     <div id="body" class="viewport animated fadeInUp" style="opacity: 0; min-height: 526px;">
@@ -260,6 +285,15 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div id="countdown-message" style="display: none;">
+                              
+                                <h2 class="countdown-title countdown-title2 text-size-wedding">
+                                    <span >
+                                        <div>It's Time up! waiting for the big day WEDDING</div></span>
+                                </h2>
+                              </div>
+                              
 
                             <h3 class="countdown-title countdown-title2"><span class="countdown-title-borders">Until we
                                     get Engaged!</span></h3>
